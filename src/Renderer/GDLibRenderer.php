@@ -25,11 +25,11 @@ final class GDLibRenderer implements RendererInterface
     private $colors;
 
     public function __construct(
-        private int $size,
-        private int $margin = 4,
-        private string $imageFormat = 'png',
-        private int $compressionQuality = 9,
-        private ?Fill $fill = null
+        int $size,
+        int $margin = 4,
+        string $imageFormat = 'png',
+        int $compressionQuality = 9,
+        ?Fill $fill = null
     ) {
         if (! extension_loaded('gd') || ! function_exists('gd_info')) {
             throw new RuntimeException('You need to install the GD extension to use this back end');

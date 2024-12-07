@@ -17,8 +17,8 @@ final class RendererStyle
     private $fill;
 
     public function __construct(
-        private int $size,
-        private int $margin = 4,
+        int $size,
+        int $margin = 4,
         ?ModuleInterface $module = null,
         ?EyeInterface $eye = null,
         ?Fill $fill = null
