@@ -9,15 +9,15 @@ use BaconQrCode\Renderer\Color\Gray;
 
 final class Fill
 {
-    private static ?Fill $default = null;
+    private static $default = null;
 
     private function __construct(
-        private readonly ColorInterface  $backgroundColor,
-        private readonly ?ColorInterface $foregroundColor,
-        private readonly ?Gradient       $foregroundGradient,
-        private readonly EyeFill         $topLeftEyeFill,
-        private readonly EyeFill         $topRightEyeFill,
-        private readonly EyeFill $bottomLeftEyeFill
+        ColorInterface  $backgroundColor,
+        ?ColorInterface $foregroundColor,
+        ?Gradient       $foregroundGradient,
+        EyeFill         $topLeftEyeFill,
+        EyeFill         $topRightEyeFill,
+        EyeFill $bottomLeftEyeFill
     ) {
     }
 

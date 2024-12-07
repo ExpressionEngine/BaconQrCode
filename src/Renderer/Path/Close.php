@@ -5,7 +5,7 @@ namespace BaconQrCode\Renderer\Path;
 
 final class Close implements OperationInterface
 {
-    private static ?Close $instance = null;
+    private static $instance = null;
 
     private function __construct()
     {

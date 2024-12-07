@@ -69,9 +69,9 @@ class FormatInformation
     /**
      * Error correction level.
      */
-    private ErrorCorrectionLevel $ecLevel;
+    private $ecLevel;
 
-    private int $dataMask;
+    private $dataMask;
 
     protected function __construct(int $formatInfo)
     {

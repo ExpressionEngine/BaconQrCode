@@ -42,7 +42,7 @@ final class Encoder
      *
      * @var array<string,ReedSolomonCodec>
      */
-    private static array $codecs = [];
+    private static $codecs = [];
 
     /**
      * Encodes "content" with the error correction level "ecLevel".

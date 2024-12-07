@@ -18,24 +18,24 @@ class BitMatrix
     /**
      * Width of the bit matrix.
      */
-    private int $width;
+    private $width;
 
     /**
      * Height of the bit matrix.
      */
-    private ?int $height;
+    private $height;
 
     /**
      * Size in bits of each individual row.
      */
-    private int $rowSize;
+    private $rowSize;
 
     /**
      * Bits representation.
      *
      * @var SplFixedArray<int>
      */
-    private SplFixedArray $bits;
+    private $bits;
 
     /**
      * @throws InvalidArgumentException if a dimension is smaller than zero

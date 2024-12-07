@@ -51,33 +51,33 @@ final class Version
     /**
      * Version number of this version.
      */
-    private int $versionNumber;
+    private $versionNumber;
 
     /**
      * Alignment pattern centers.
      *
      * @var SplFixedArray|array
      */
-    private SplFixedArray|array $alignmentPatternCenters;
+    private $alignmentPatternCenters;
 
     /**
      * Error correction blocks.
      *
      * @var EcBlocks[]
      */
-    private array $ecBlocks;
+    private $ecBlocks;
 
     /**
      * Total number of codewords.
      */
-    private null|int|float $totalCodewords;
+    private $totalCodewords;
 
     /**
      * Cached version instances.
      *
      * @var array<int, self>|null
      */
-    private static ?array $versions = null;
+    private static $versions = null;
 
     /**
      * @param int[] $alignmentPatternCenters

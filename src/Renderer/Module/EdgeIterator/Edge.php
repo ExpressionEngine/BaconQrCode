@@ -8,22 +8,22 @@ final class Edge
     /**
      * @var array<int[]>
      */
-    private array $points = [];
+    private $points = [];
 
     /**
      * @var array<int[]>|null
      */
-    private ?array $simplifiedPoints = null;
+    private $simplifiedPoints = null;
 
-    private int $minX = PHP_INT_MAX;
+    private $minX = PHP_INT_MAX;
 
-    private int $minY = PHP_INT_MAX;
+    private $minY = PHP_INT_MAX;
 
-    private int $maxX = -1;
+    private $maxX = -1;
 
-    private int $maxY = -1;
+    private $maxY = -1;
 
-    public function __construct(private readonly bool $positive)
+    public function __construct(bool $positive)
     {
     }
 

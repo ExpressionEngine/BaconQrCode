@@ -17,12 +17,12 @@ use GdImage;
 
 final class GDLibRenderer implements RendererInterface
 {
-    private ?GdImage $image;
+    private $image;
 
     /**
      * @var array<string, int>
      */
-    private array $colors;
+    private $colors;
 
     public function __construct(
         private int $size,

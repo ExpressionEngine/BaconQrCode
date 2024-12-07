@@ -7,18 +7,18 @@ final class EllipticArc implements OperationInterface
 {
     private const ZERO_TOLERANCE = 1e-05;
 
-    private float $xRadius;
-    private float $yRadius;
-    private float $xAxisAngle;
+    private $xRadius;
+    private $yRadius;
+    private $xAxisAngle;
 
     public function __construct(
         float                  $xRadius,
         float                  $yRadius,
         float                  $xAxisAngle,
-        private readonly bool  $largeArc,
-        private readonly bool  $sweep,
-        private readonly float $x,
-        private readonly float $y
+        bool  $largeArc,
+        bool  $sweep,
+        float $x,
+        float $y
     ) {
         $this->xRadius = abs($xRadius);
         $this->yRadius = abs($yRadius);

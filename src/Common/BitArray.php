@@ -16,12 +16,12 @@ final class BitArray
      *
      * @var SplFixedArray<int>
      */
-    private SplFixedArray $bits;
+    private $bits;
 
     /**
      * Creates a new bit array with a given size.
      */
-    public function __construct(private int $size = 0)
+    public function __construct(int $size = 0)
     {
         $this->bits = SplFixedArray::fromArray(array_fill(0, ($this->size + 31) >> 3, 0));
     }

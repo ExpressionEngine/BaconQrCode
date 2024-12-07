@@ -17,9 +17,9 @@ final class EcBlocks
      *
      * @var EcBlock[]
      */
-    private array $ecBlocks;
+    private $ecBlocks;
 
-    public function __construct(private readonly int $ecCodewordsPerBlock, EcBlock ...$ecBlocks)
+    public function __construct(int $ecCodewordsPerBlock, EcBlock ...$ecBlocks)
     {
         $this->ecBlocks = $ecBlocks;
     }

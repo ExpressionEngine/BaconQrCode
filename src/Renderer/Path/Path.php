@@ -14,7 +14,7 @@ final class Path implements IteratorAggregate
     /**
      * @var OperationInterface[]
      */
-    private array $operations = [];
+    private $operations = [];
 
     /**
      * Moves the drawing operation to a certain position.

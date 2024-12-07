@@ -17,58 +17,58 @@ final class ReedSolomonCodec
     /**
      * Symbol size in bits.
      */
-    private int $symbolSize;
+    private $symbolSize;
 
     /**
      * Block size in symbols.
      */
-    private int $blockSize;
+    private $blockSize;
 
     /**
      * First root of RS code generator polynomial, index form.
      */
-    private int $firstRoot;
+    private $firstRoot;
 
     /**
      * Primitive element to generate polynomial roots, index form.
      */
-    private int $primitive;
+    private $primitive;
 
     /**
      * Prim-th root of 1, index form.
      */
-    private int $iPrimitive;
+    private $iPrimitive;
 
     /**
      * RS code generator polynomial degree (number of roots).
      */
-    private int $numRoots;
+    private $numRoots;
 
     /**
      * Padding bytes at front of shortened block.
      */
-    private int $padding;
+    private $padding;
 
     /**
      * Log lookup table.
      *
      * @var SplFixedArray
      */
-    private SplFixedArray $alphaTo;
+    private $alphaTo;
 
     /**
      * Anti-Log lookup table.
      *
      * @var SplFixedArray
      */
-    private SplFixedArray $indexOf;
+    private $indexOf;
 
     /**
      * Generator polynomial.
      *
      * @var SplFixedArray
      */
-    private SplFixedArray $generatorPoly;
+    private $generatorPoly;
 
     /**
      * @throws InvalidArgumentException if symbol size ist not between 0 and 8

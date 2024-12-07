@@ -22,13 +22,13 @@ final class SvgImageBackEnd implements ImageBackEndInterface
     private const SCALE_FORMAT = 'scale(%.' . self::PRECISION . 'F)';
     private const TRANSLATE_FORMAT = 'translate(%.' . self::PRECISION . 'F,%.' . self::PRECISION . 'F)';
 
-    private ?XMLWriter $xmlWriter;
+    private $xmlWriter;
 
-    private ?array $stack;
+    private $stack;
 
-    private ?int $currentStack;
+    private $currentStack;
 
-    private ?int $gradientCount;
+    private $gradientCount;
 
     public function __construct()
     {

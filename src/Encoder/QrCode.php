@@ -20,17 +20,17 @@ final class QrCode
     /**
      * Mask pattern of the QR code.
      */
-    private int $maskPattern = -1;
+    private $maskPattern = -1;
 
     /**
      * Matrix of the QR code.
      */
-    private ByteMatrix $matrix;
+    private $matrix;
 
     public function __construct(
-        private readonly Mode                 $mode,
-        private readonly ErrorCorrectionLevel $errorCorrectionLevel,
-        private readonly Version              $version,
+        Mode                 $mode,
+        ErrorCorrectionLevel $errorCorrectionLevel,
+        Version              $version,
         int                                   $maskPattern,
         ByteMatrix                            $matrix
     ) {
