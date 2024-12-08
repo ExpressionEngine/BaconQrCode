@@ -10,6 +10,9 @@ use SplFixedArray;
  */
 final class BlockPair
 {
+    private $dataBytes;
+    private $errorCorrectionBytes;
+
     /**
      * Creates a new block pair.
      *
@@ -20,6 +23,8 @@ final class BlockPair
         SplFixedArray $dataBytes,
         SplFixedArray $errorCorrectionBytes
     ) {
+        $this->dataBytes = $dataBytes;
+        $this->errorCorrectionBytes = $errorCorrectionBytes;
     }
 
     /**

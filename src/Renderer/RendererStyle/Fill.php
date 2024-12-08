@@ -11,6 +11,13 @@ final class Fill
 {
     private static $default = null;
 
+    private $backgroundColor;
+    private $foregroundColor;
+    private $foregroundGradient;
+    private $topLeftEyeFill;
+    private $topRightEyeFill;
+    private $bottomLeftEyeFill;
+
     private function __construct(
         ColorInterface  $backgroundColor,
         ?ColorInterface $foregroundColor,
@@ -19,6 +26,12 @@ final class Fill
         EyeFill         $topRightEyeFill,
         EyeFill $bottomLeftEyeFill
     ) {
+        $this->backgroundColor = $backgroundColor;
+        $this->foregroundColor = $foregroundColor;
+        $this->foregroundGradient = $foregroundGradient;
+        $this->topLeftEyeFill = $topLeftEyeFill;
+        $this->topRightEyeFill = $topRightEyeFill;
+        $this->bottomLeftEyeFill = $bottomLeftEyeFill;
     }
 
     public static function default() : self

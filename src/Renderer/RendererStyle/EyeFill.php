@@ -10,10 +10,16 @@ final class EyeFill
 {
     private static $inherit = null;
 
+    private $externalColor;
+
+    private $internalColor;
+
     public function __construct(
         ?ColorInterface $externalColor,
         ?ColorInterface $internalColor
     ) {
+        $this->externalColor = $externalColor;
+        $this->internalColor = $internalColor;
     }
 
     public static function uniform(ColorInterface $color) : self

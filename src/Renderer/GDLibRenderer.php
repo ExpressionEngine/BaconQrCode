@@ -24,6 +24,12 @@ final class GDLibRenderer implements RendererInterface
      */
     private $colors;
 
+    private $size;
+    private $margin;
+    private $imageFormat;
+    private $compressionQuality;
+    private $fill;
+
     public function __construct(
         int $size,
         int $margin = 4,
@@ -34,6 +40,12 @@ final class GDLibRenderer implements RendererInterface
         if (! extension_loaded('gd') || ! function_exists('gd_info')) {
             throw new RuntimeException('You need to install the GD extension to use this back end');
         }
+
+        $this->size = $size;
+        $this->margin = $margin;
+        $this->imageFormat = $imageFormat;
+        $this->compressionQuality = $compressionQuality;
+        $this->fill = $fill;
 
         if ($this->fill === null) {
             $this->fill = Fill::default();

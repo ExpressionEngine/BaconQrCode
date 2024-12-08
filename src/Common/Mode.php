@@ -32,6 +32,9 @@ final class Mode extends AbstractEnum
     protected const FNC1_SECOND_POSITION = [[0, 0, 0], 0x09];
     protected const HANZI = [[8, 10, 12], 0x0d];
 
+    private $characterCountBitsForVersions;
+    private $bits;
+
     /**
      * @param int[] $characterCountBitsForVersions
      */
@@ -39,6 +42,8 @@ final class Mode extends AbstractEnum
         array $characterCountBitsForVersions,
         int   $bits
     ) {
+        $this->characterCountBitsForVersions = $characterCountBitsForVersions;
+        $this->bits = $bits;
     }
 
     /**

@@ -16,11 +16,14 @@ final class DotsModule implements ModuleInterface
     public const MEDIUM = .8;
     public const SMALL = .6;
 
+    private $size;
+
     public function __construct(float $size)
     {
         if ($size <= 0 || $size > 1) {
             throw new InvalidArgumentException('Size must between 0 (exclusive) and 1 (inclusive)');
         }
+        $this->size = $size;
     }
 
     public function createPath(ByteMatrix $matrix) : Path

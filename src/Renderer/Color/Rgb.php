@@ -7,6 +7,12 @@ use BaconQrCode\Exception;
 
 final class Rgb implements ColorInterface
 {
+    private $red;
+
+    private $green;
+
+    private $blue;
+
     /**
      * @param int $red the red amount of the color, 0 to 255
      * @param int $green the green amount of the color, 0 to 255
@@ -25,6 +31,10 @@ final class Rgb implements ColorInterface
         if ($blue < 0 || $blue > 255) {
             throw new Exception\InvalidArgumentException('Blue must be between 0 and 255');
         }
+
+        $this->red = $red;
+        $this->green = $green;
+        $this->blue = $blue;
     }
 
     public function getRed() : int

@@ -5,6 +5,13 @@ namespace BaconQrCode\Renderer\Path;
 
 final class Curve implements OperationInterface
 {
+    private $x1;
+    private $y1;
+    private $x2;
+    private $y2;
+    private $x3;
+    private $y3;
+
     public function __construct(
         float $x1,
         float $y1,
@@ -13,6 +20,12 @@ final class Curve implements OperationInterface
         float $x3,
         float $y3
     ) {
+        $this->x1 = $x1;
+        $this->y1 = $y1;
+        $this->x2 = $x2;
+        $this->y2 = $y2;
+        $this->x3 = $x3;
+        $this->y3 = $y3;
     }
 
     public function getX1() : float

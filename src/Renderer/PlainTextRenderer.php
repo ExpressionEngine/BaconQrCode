@@ -28,8 +28,11 @@ final class PlainTextRenderer implements RendererInterface
      */
     private const EMPTY_BLOCK = "\xc2\xa0";
 
+    private $margin;
+
     public function __construct(int $margin = 2)
     {
+        $this->margin = $margin;
     }
 
     /**

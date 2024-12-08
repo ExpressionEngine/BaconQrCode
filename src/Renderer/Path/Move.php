@@ -5,8 +5,13 @@ namespace BaconQrCode\Renderer\Path;
 
 final class Move implements OperationInterface
 {
+    private $x;
+    private $y;
+
     public function __construct(float $x, float $y)
     {
+        $this->x = $x;
+        $this->y = $y;
     }
 
     public function getX() : float

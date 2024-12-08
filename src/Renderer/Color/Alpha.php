@@ -7,6 +7,9 @@ use BaconQrCode\Exception;
 
 final class Alpha implements ColorInterface
 {
+    private $alpha;
+    private $baseColor;
+
     /**
      * @param int $alpha the alpha value, 0 to 100
      */
@@ -15,6 +18,8 @@ final class Alpha implements ColorInterface
         if ($alpha < 0 || $alpha > 100) {
             throw new Exception\InvalidArgumentException('Alpha must be between 0 and 100');
         }
+        $this->alpha = $alpha;
+        $this->baseColor = $baseColor;
     }
 
     public function getAlpha() : int

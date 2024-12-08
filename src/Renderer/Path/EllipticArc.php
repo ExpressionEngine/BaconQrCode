@@ -10,6 +10,10 @@ final class EllipticArc implements OperationInterface
     private $xRadius;
     private $yRadius;
     private $xAxisAngle;
+    private $largeArc;
+    private $sweep;
+    private $x;
+    private $y;
 
     public function __construct(
         float                  $xRadius,
@@ -23,6 +27,10 @@ final class EllipticArc implements OperationInterface
         $this->xRadius = abs($xRadius);
         $this->yRadius = abs($yRadius);
         $this->xAxisAngle = $xAxisAngle % 360;
+        $this->largeArc = $largeArc;
+        $this->sweep = $sweep;
+        $this->x = $x;
+        $this->y = $y;
     }
 
     public function getXRadius() : float

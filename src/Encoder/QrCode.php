@@ -27,6 +27,21 @@ final class QrCode
      */
     private $matrix;
 
+    /**
+     * Mode of the QR code.
+     */
+    private $mode;
+
+    /**
+     * Error correction level of the QR code.
+     */
+    private $errorCorrectionLevel;
+
+    /**
+     * Version of the QR code.
+     */
+    private $version;
+
     public function __construct(
         Mode                 $mode,
         ErrorCorrectionLevel $errorCorrectionLevel,
@@ -34,6 +49,9 @@ final class QrCode
         int                                   $maskPattern,
         ByteMatrix                            $matrix
     ) {
+        $this->mode = $mode;
+        $this->errorCorrectionLevel = $errorCorrectionLevel;
+        $this->version = $version;
         $this->maskPattern = $maskPattern;
         $this->matrix = $matrix;
     }

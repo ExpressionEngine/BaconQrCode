@@ -23,8 +23,11 @@ final class Edge
 
     private $maxY = -1;
 
+    private $positive;
+
     public function __construct(bool $positive)
     {
+        $this->positive = $positive;
     }
 
     public function addPoint(int $x, int $y) : void

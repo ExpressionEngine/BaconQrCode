@@ -7,6 +7,14 @@ use BaconQrCode\Exception;
 
 final class Cmyk implements ColorInterface
 {
+    private $cyan;
+
+    private $magenta;
+
+    private $yellow;
+
+    private $black;
+
     /**
      * @param int $cyan the cyan amount, 0 to 100
      * @param int $magenta the magenta amount, 0 to 100
@@ -34,6 +42,10 @@ final class Cmyk implements ColorInterface
         if ($black < 0 || $black > 100) {
             throw new Exception\InvalidArgumentException('Black must be between 0 and 100');
         }
+        $this->cyan = $cyan;
+        $this->magenta = $magenta;
+        $this->yellow = $yellow;
+        $this->black = $black;
     }
 
     public function getCyan() : int

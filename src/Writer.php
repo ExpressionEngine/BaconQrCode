@@ -14,11 +14,14 @@ use BaconQrCode\Renderer\RendererInterface;
  */
 final class Writer
 {
+    private $renderer;
+
     /**
      * Creates a new writer with a specific renderer.
      */
     public function __construct(RendererInterface $renderer)
     {
+        $this->renderer = $renderer;
     }
 
     /**

@@ -13,10 +13,15 @@ use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 
 final class ImageRenderer implements RendererInterface
 {
+    private $rendererStyle;
+    private $imageBackEnd;
+
     public function __construct(
         RendererStyle         $rendererStyle,
         ImageBackEndInterface $imageBackEnd
     ) {
+        $this->rendererStyle = $rendererStyle;
+        $this->imageBackEnd = $imageBackEnd;
     }
 
     /**

@@ -16,6 +16,9 @@ final class RendererStyle
 
     private $fill;
 
+    private $size;
+    private $margin;
+
     public function __construct(
         int $size,
         int $margin = 4,
@@ -23,6 +26,8 @@ final class RendererStyle
         ?EyeInterface $eye = null,
         ?Fill $fill = null
     ) {
+        $this->size = $size;
+        $this->margin = $margin;
         $this->module = $module ?: SquareModule::instance();
         $this->eye = $eye ?: new ModuleEye($this->module);
         $this->fill = $fill ?: Fill::default();

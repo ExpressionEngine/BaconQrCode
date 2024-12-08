@@ -19,8 +19,16 @@ final class EcBlocks
      */
     private $ecBlocks;
 
+    /**
+     * Number of EC codewords per block.
+     *
+     * @var int
+     */
+    private $ecCodewordsPerBlock;
+
     public function __construct(int $ecCodewordsPerBlock, EcBlock ...$ecBlocks)
     {
+        $this->ecCodewordsPerBlock = $ecCodewordsPerBlock;
         $this->ecBlocks = $ecBlocks;
     }
 

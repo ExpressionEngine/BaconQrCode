@@ -7,11 +7,18 @@ use BaconQrCode\Renderer\Color\ColorInterface;
 
 final class Gradient
 {
+    private $startColor;
+    private $endColor;
+    private $type;
+
     public function __construct(
         ColorInterface $startColor,
         ColorInterface $endColor,
         GradientType   $type
     ) {
+        $this->startColor = $startColor;
+        $this->endColor = $endColor;
+        $this->type = $type;
     }
 
     public function getStartColor() : ColorInterface

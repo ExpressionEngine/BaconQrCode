@@ -18,8 +18,13 @@ final class ByteMatrix
      */
     private $bytes;
 
+    private $width;
+    private $height;
+
     public function __construct(int $width, int $height)
     {
+        $this->width = $width;
+        $this->height = $height;
         $this->bytes = new SplFixedArray($height);
 
         for ($y = 0; $y < $height; ++$y) {
